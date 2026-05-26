@@ -25,12 +25,12 @@ interface FilterPanelProps {
 const FilterSection = ({
   title,
   items,
-  selectedItems,
+  selectedItems = [],
   onToggle,
 }: {
   title: string;
   items: any[];
-  selectedItems: string[];
+  selectedItems?: string[];
   onToggle: (label: string) => void;
 }) => (
   <div className="py-5 border-t border-default">
@@ -39,7 +39,7 @@ const FilterSection = ({
     </h3>
     <div className="flex flex-wrap gap-2">
       {items.map((item, idx) => {
-        const isSelected = selectedItems.includes(item.label?.toLowerCase());
+        const isSelected = selectedItems?.includes(item.label?.toLowerCase());
         return (
           <button
             key={idx}
