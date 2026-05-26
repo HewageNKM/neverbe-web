@@ -252,12 +252,12 @@ const ProductHero = ({ item }: { item: Product }) => {
 
         <div className="grid grid-cols-6 gap-2">
           {selectedVariant.images.map((img, idx) => (
-            <Button
-              type="text"
+            <button
+              type="button"
               key={idx}
-              onMouseEnter={() => setSelectedImage(img)}
-              className={`relative aspect-square bg-surface-2 rounded-xl overflow-hidden border-2 transition-all p-0 h-auto ${selectedImage.url === img.url
-                  ? "border-primary hover:border-primary focus:border-primary"
+              onClick={() => setSelectedImage(img)}
+              className={`relative aspect-square bg-surface-2 rounded-xl overflow-hidden border-2 transition-all p-0 h-auto w-full ${selectedImage.url === img.url
+                  ? "border-primary opacity-100 scale-95 shadow-md"
                   : "border-transparent opacity-70 hover:opacity-100 focus:opacity-100"
                 }`}
             >
@@ -267,9 +267,11 @@ const ProductHero = ({ item }: { item: Product }) => {
                 fill
                 className="object-cover mix-blend-multiply"
               />
-            </Button>
+            </button>
           ))}
         </div>
+
+
       </div>
 
       {/* --- RIGHT COLUMN: DETAILS --- */}
@@ -312,7 +314,7 @@ const ProductHero = ({ item }: { item: Product }) => {
 
               {/* Savings Pill */}
               {hasAnyDiscount && totalSavings > 0 && (
-                <span className="bg-success text-primary-dark text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-custom">
+                <span className="bg-success text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-custom">
                   {isPromoDiscount ? "Promo Save" : "Save"} Rs. {totalSavings.toLocaleString()}
                 </span>
               )}

@@ -47,7 +47,7 @@ const CouponCard: React.FC<Props> = ({ coupon }) => {
       <div className="flex-1 p-4 sm:p-5 flex flex-col justify-between">
         <div>
           <div className="flex flex-wrap items-center gap-2 mb-2">
-            <span className="bg-accent text-dark text-[10px] font-display font-black px-3 py-1 rounded-full uppercase tracking-tight">
+            <span className="bg-accent text-white text-[10px] font-display font-black px-3 py-1 rounded-full uppercase tracking-tight">
               {coupon.code.toUpperCase()}
             </span>
             {coupon.endDate && (
@@ -87,8 +87,8 @@ const CouponCard: React.FC<Props> = ({ coupon }) => {
           onClick={handleCopy}
           className={`mt-3 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all active:scale-95 ${
             copied
-              ? "bg-success text-dark"
-              : "bg-dark text-inverse hover:bg-accent hover:text-dark"
+              ? "bg-success text-white"
+              : "bg-dark text-inverse hover:bg-accent hover:text-white"
           }`}
         >
           {copied ? "Copied ✓" : "Copy"}

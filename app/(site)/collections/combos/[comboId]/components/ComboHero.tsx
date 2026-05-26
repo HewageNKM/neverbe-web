@@ -425,12 +425,12 @@ const ComboHero: React.FC<ComboHeroProps> = ({ combo }) => {
             </span>
           </div>
 
-          <div className="absolute top-0 right-0 bg-success text-dark px-4 py-2 text-[10px] font-black uppercase tracking-widest">
+          <div className="absolute top-0 right-0 bg-success text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest">
             Save Rs. {combo.savings.toLocaleString()}
           </div>
 
           {activeSlot?.isFreeUnit && (
-            <div className="absolute bottom-0 left-0 bg-accent text-dark px-4 py-2 text-[10px] font-black uppercase tracking-widest animate-pulse">
+            <div className="absolute bottom-0 left-0 bg-accent text-white px-4 py-2 text-[10px] font-black uppercase tracking-widest animate-pulse">
               Free Item
             </div>
           )}
@@ -470,7 +470,7 @@ const ComboHero: React.FC<ComboHeroProps> = ({ combo }) => {
                 )}
 
                 {slot.isFreeUnit && (
-                  <div className="absolute bottom-0 left-0 right-0 bg-accent text-dark text-[8px] font-bold uppercase text-center py-0.5">
+                  <div className="absolute bottom-0 left-0 right-0 bg-accent text-white text-[8px] font-bold uppercase text-center py-0.5">
                     Free
                   </div>
                 )}
@@ -521,7 +521,7 @@ const ComboHero: React.FC<ComboHeroProps> = ({ combo }) => {
                       {slot.label}
                     </span>
                     {slot.isFreeUnit && (
-                      <span className="text-[9px] bg-accent text-dark px-1 font-bold uppercase">
+                      <span className="text-[9px] bg-accent text-white px-1 font-bold uppercase">
                         Free
                       </span>
                     )}
@@ -573,7 +573,7 @@ const ComboHero: React.FC<ComboHeroProps> = ({ combo }) => {
               <span className="text-xl font-bold text-muted line-through">
                 Rs. {combo.originalPrice.toLocaleString()}
               </span>
-              <span className="bg-success text-dark text-[10px] font-black px-3 py-1 uppercase tracking-widest">
+              <span className="bg-success text-white text-[10px] font-black px-3 py-1 uppercase tracking-widest">
                 Save Rs. {pricing.savings.toLocaleString()}
               </span>
             </div>

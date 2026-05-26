@@ -414,7 +414,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
 
                   {/* Savings Pill */}
                   {hasAnyDiscount && totalSavings > 0 && (
-                    <span className="bg-success text-primary-dark text-[9px] sm:text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-custom">
+                    <span className="bg-success text-white text-[9px] sm:text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest shadow-custom">
                       {isPromoDiscount ? "Promo Save" : "Save"} Rs. {totalSavings.toLocaleString()}
                     </span>
                   )}
